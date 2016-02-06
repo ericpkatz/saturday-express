@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form class='form' method='POST' action='/foos'>
+    <div class='form-group'>
+        <label for='text'>Text</label>
+        <input class='form-control' name='text' id='text' />
+    </div>
+    <button type='submit' class='btn btn-default'>Save</button>
+</form>
+{% endblock %}

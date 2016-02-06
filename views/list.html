@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% include 'controls.html' %}
+{% if foos.length === 0 %}
+    <div class='alert alert-warning'>
+    I'm sorry you have no foos!!
+    </div>
+{% else %}
+<ul class='list-group'>
+    {% for foo in foos %}
+        <li class='list-group-item'>{{ foo.text }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+I am in index.html
+{% endblock %}
