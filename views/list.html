@@ -8,7 +8,10 @@
 {% else %}
 <ul class='list-group'>
     {% for foo in foos %}
-        <li class='list-group-item'>{{ foo.text }}</li>
+        <li class='list-group-item'>
+            {{ foo.text }}
+            <a href='/foos/{{foo.id}}/edit'>Edit</a>
+        </li>
     {% endfor %}
 </ul>
 {% endif %}

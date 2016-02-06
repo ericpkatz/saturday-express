@@ -11,6 +11,7 @@ var app = express();
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
 
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(require('method-override')('_method'));
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 
