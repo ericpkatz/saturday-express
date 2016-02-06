@@ -13,6 +13,13 @@ router.put('/:id', function(req, res, next){
     db.update(foo);
     res.redirect('/foos');
 });
+
+router.delete('/:id', function(req, res, next){
+    var foo = { id: req.params.id*1 };
+    db.delete(foo);
+    res.redirect('/foos');
+    
+});
 router.get('/', function(req, res, next){
     res.render('list', {foos: db.list(), title: 'Foo-list'});
 });
